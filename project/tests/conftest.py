@@ -14,7 +14,7 @@ def get_settings_override():
 @pytest.fixture(scope="module")
 def test_app():
     # set up
-    main.app.dependecy_overrides[get_settings] = get_settings_override
+    main.app.dependency_overrides[get_settings] = get_settings_override
     with TestClient(main.app) as test_client:
 
         # testing
