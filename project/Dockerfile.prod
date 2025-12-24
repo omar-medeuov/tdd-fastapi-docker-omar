@@ -25,7 +25,7 @@ RUN apt-get update \
     && apt-get clean
 
 # install python dependencies \
-RUN pip instsall --upgrade pip
+RUN pip install --upgrade pip
 COPY ./requirements.txt .
 RUN pip install -r requirements.txt
 RUN pip install "uvicorn[standard]==0.34.1"
